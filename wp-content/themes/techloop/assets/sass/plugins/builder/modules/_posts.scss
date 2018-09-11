@@ -1,0 +1,238 @@
+#tm_builder_outer_content .tm_pb_module.tm_pb_posts {
+	padding: $padding-box-md * .8 $padding-box-md 0;
+
+	@include media-breakpoint-only(lg) {
+		padding: $padding-box-sm * 1.1 $padding-box-sm 0;
+	}
+
+	.tm-posts_title_group {
+		text-align: left;
+
+		.tm-posts_title_divider {
+			max-width: 100%;
+			background: $color__background-hr;
+		}
+
+		> *:last-child {
+			margin-bottom: 31px;
+		}
+	}
+
+	.tm-posts_listing {
+		padding: 0;
+	}
+
+	.post-cats {
+		@include media-breakpoint-down(xs) {
+			display: none;
+		}
+	}
+
+	.tm-posts_layout-1,
+	.tm-posts_layout-2 {
+		.tm_pb_column {
+			display: flex;
+		}
+
+		.tm-posts_item {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+
+	.tm-posts_layout-2 {
+		.tm-posts_item {
+			.posts_item_content_footer {
+				padding-top: 10px;
+				margin-top: 10px;
+				border-top: 1px solid $color__background-hr;
+			}
+
+			.tm-posts_item_title {
+				margin-top: 0;
+				margin-bottom: 2px;
+			}
+		}
+	}
+
+	.tm-posts_layout-3 {
+		.tm-posts_item {
+			margin-bottom: $grid-gutter-width;
+
+			.tm-posts_item_content {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				height: 100%;
+				padding: 20px;
+				text-align: center;
+
+				@include media-breakpoint-up(xxl) {
+					padding: 20px 30px;
+				}
+			}
+
+			.entry-meta {
+				justify-content: center;
+				margin-top: 4px;
+			}
+
+			.post-cats {
+				padding: 10px 20px  13px;
+
+				@include media-breakpoint-up(xxl){
+					padding: 40px 40px 20px;
+				}
+			}
+
+			.tm-posts_item_title {
+				margin-top: 0;
+
+				a{
+					@include text-ellipsis();
+				}
+			}
+		}
+	}
+
+	.tm-posts_item {
+		margin-bottom: 30px;
+
+		.tm-posts_img {
+			display: block;
+		}
+
+		.tm-posts_item_title {
+			margin-top: 22px;
+			margin-bottom: 2px;
+		}
+
+		.tm-posts_item_meta {
+			margin-left: -8px;
+			margin-right: -8px;
+			padding: 0;
+
+			> * {
+				margin-bottom: 0;
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+		}
+
+		.tm-posts_item_excerpt {
+			margin-top: 19px;
+			padding-bottom: 0;
+		}
+
+		.posts_item_content_footer {
+			margin-top: 15px;
+		}
+	}
+
+	.tm-posts_button_wrap {
+		padding-top: 20px;
+		padding-bottom: 40px;
+	}
+
+	.tm-pb-spinner-double-bounce.tm-pb-spinner {
+		margin: -20px 0 0 15px;
+	}
+}
+
+#tm_builder_outer_content {
+
+	.tm_pb_module.tm_pb_posts[data-atts*="layout-3"] {
+		padding: 0;
+		background: transparent;
+	}
+	.tm_pb_module.tm_pb_posts {
+
+		.tm-posts_title {
+			margin-bottom: 0;
+			padding: 20px 30px;
+		}
+
+		.tm-posts_title_group > :last-child {
+			margin-bottom: 0;
+		}
+		.tm-posts_layout-3 {
+			transform-style: preserve-3d;
+			perspective: 1000px;
+			position: relative;
+			.post-cats,
+			.tm-posts_item_title,
+			.tm-posts_item_meta {
+				transition: .15s;
+			}
+
+			.tm-posts_item {
+				margin-bottom: 0;
+				overflow: hidden;
+
+				&:hover {
+					.post-cats,
+					.tm-posts_item_title,
+					.tm-posts_item_meta {
+						opacity: 0;
+					}
+
+					.posts_item_content_footer {
+						opacity: 1;
+						visibility: visible;
+						> * {
+							@include transform(translateY(0));
+						}
+					}
+				}
+			}
+
+			.posts_item_content_footer {
+				margin: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				z-index: 10;
+				padding: 2rem;
+				opacity: 0;
+				visibility: hidden;
+				transition: .25s ease;
+				background: rgba(0, 0, 0, .8);
+
+				@include flexbox();
+				@include flex-direction(column);
+				@include justify-content(center);
+				@include align-items(center);
+
+				> * {
+					@include transform(translateY(50px));
+					transition: all .3s ease-out;
+				}
+
+				.tm-posts_item_excerpt {
+					transition-delay: 0s;
+					margin-bottom: 15px;
+				}
+
+				.btn {
+					transition-delay: .15s;
+				}
+
+				&:empty {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+#tm_builder_outer_content .tm_pb_module.tm_pb_posts .tm-posts_layout-3 .posts_item_content_footer .tm-posts_item_excerpt {
+	@include media-breakpoint-down(xs) {
+		display: none;
+	}
+}

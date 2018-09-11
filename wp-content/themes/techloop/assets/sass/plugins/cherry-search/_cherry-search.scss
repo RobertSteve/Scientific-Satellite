@@ -1,0 +1,159 @@
+// Cherry search styles
+.cherry-search-wrapper {
+	.cherry-search__label {
+		position: relative;
+
+		.mobile-panel & {
+			position: static;
+		}
+
+		.input-search-icon {
+			pointer-events: none;
+			font-size: 18px;
+			left: 20px;
+			position: absolute;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+	}
+
+	.cherry-search__results-list {
+		border-color: $color__background-hr;
+	}
+
+	.cherry-search__results-item {
+		border-color: $color__background-hr;
+		a {
+			padding: 10px;
+		}
+
+		.cherry-search__item-title {
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+	}
+
+	.cherry-search__more-button {
+		text-transform: uppercase;
+		font-weight: 500;
+		border: none;
+		margin-bottom: -1px;
+	}
+
+}
+
+// Styles for cherry search preloader
+.cherry-search__spinner_holder .cherry-search__spinner {
+	height: 70px;
+	width: 20%;
+	min-width: 70px;
+	text-align: center;
+	padding: 1em;
+	display: none;
+	vertical-align: top;
+	opacity: .6;
+
+	&.show {
+		display: inline-block;
+	}
+}
+
+
+// Styles for cherry search in mobile panel
+.mobile-panel {
+	.cherry-search {
+		position: static;
+		.cherry-search__form {
+			left: 10px;
+
+			@include media-breakpoint-down(xs) {
+				.cherry-search__results-item {
+					a {
+						@include flex-direction(column);
+
+						.cherry-search__item-thumbnail {
+							margin: 0;
+							min-width: 100%;
+							@include flex(0 1 100%);
+						}
+					}
+				}
+			}
+
+			.search-form__field[type="search"] {
+				padding: 9px 20px 9px 50px;
+
+				&:focus {
+					background: #fff;
+				}
+			}
+
+			.cherry-search__submit {
+				font-size: 0;
+				flex: 0 0 auto;
+				margin: 0;
+				padding: 13px 10px;
+				text-align: center;
+				width: 50px;
+
+				&:before {
+					content: "\e922";
+					display: block !important;
+					font-size: 19px;
+					@include linear-icon;
+				}
+			}
+		}
+	}
+}
+
+// Styles for cherry search in header layouts 2,3,4
+.site-header {
+	&.style-2,
+	&.style-3,
+	&.style-4 {
+		.cherry-search {
+			position: static;
+
+			form.cherry-search__form button.search-submit {
+				padding: 14px 30px;
+
+			}
+		}
+
+		.mobile-panel {
+			.cherry-search {
+				form.cherry-search__form button.search-submit {
+					padding: 13px 10px;
+				}
+			}
+		}
+	}
+}
+
+
+// Styles for cherry search in sidebar
+.cherry-search {
+	@include sidebars-area() {
+		.cherry-search__results-item {
+			a {
+				@include flex-direction(column);
+
+				.cherry-search__item-thumbnail {
+					margin: 0 0 10px 0;
+					min-width: 100%;
+					@include flex(0 1 100%);
+				}
+			}
+		}
+
+		form.cherry-search__form button.search-submit {
+			margin: 5px 0 0;
+			min-width: 100%;
+			padding-top: 18px;
+			padding-bottom: 18px;
+		}
+	}
+}

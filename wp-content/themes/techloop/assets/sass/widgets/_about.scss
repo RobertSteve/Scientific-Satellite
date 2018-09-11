@@ -1,0 +1,58 @@
+.widget-about__content {
+	margin-top: 15px;
+}
+.widget.widget-about {
+	text-align: center;
+	padding-bottom: 30px;
+
+	.widget-title {
+		text-align: left;
+	}
+	> *:not(.widget-title) {
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+
+	&__logo-img {
+		vertical-align: top;
+	}
+
+	&__content {
+		margin-top: 15px;
+	}
+
+	&__tagline {
+		margin-top: 10px;
+		@include font-size(.75);
+	}
+
+	&__social {
+		margin-top: 20px;
+
+		.menu-item > a::before {
+			font-size: 15px;
+		}
+	}
+
+	@include sidebars-area() {
+		text-align: left;
+	}
+
+	.second-footer-area:not(.footer-area--fullwidth) &,
+	.footer-area:not(.footer-area--fullwidth) &{
+		&__content {
+			text-align: left;
+			text-transform: none;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 28px;
+		}
+	}
+}
+
+#tm_builder_outer_content .about-page-sidebar .tm_pb_module.tm_pb_widget_area .widget.tm_about_store_widget{
+	padding: 5em 6% 5.5em;
+
+	text-align: center;
+}
+

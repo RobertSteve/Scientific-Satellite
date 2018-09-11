@@ -1,0 +1,71 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@include btn;
+	text-transform: capitalize;
+}
+
+// General styles
+.btn {
+	text-decoration: none;
+	@include btn;
+	text-transform: capitalize;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:active {
+		outline: 0;
+		box-shadow: none;
+	}
+
+	&-fullwidth {
+		width: 100%;
+	}
+
+	&.btn-default { 
+		background-color: transparent;
+		border-color: $color__border-button;
+	}
+}
+
+.link {
+	display: inline-block;
+	letter-spacing: .08em;
+	text-transform: none;
+	@include font-size(14/16);
+	line-height: 18px;
+	font-weight: 600;
+
+	i {
+		font-size: 14px;
+		line-height: 18px;
+		margin-left: 5px;
+	}
+
+	& &__text {
+		display: inline-block;
+		border-bottom: 1px solid;
+		transition: border .2s ease;
+
+		&:hover {
+			border-bottom: 1px solid transparent;
+		}
+	}
+}
+
+.woocommerce #respond input#submit,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button,
+.woocommerce a.button.alt,
+.woocommerce a.button.loading,
+.woocommerce button.button,
+.woocommerce button.button.alt,
+.woocommerce input.button,
+.woocommerce input.button.alt,
+.woocommerce input.button:disabled,
+.woocommerce input.button:disabled[disabled]{
+	text-transform: capitalize;
+}

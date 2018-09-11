@@ -1,0 +1,8 @@
+/* #Carousel */
+.widget-carousel .swiper-slide {
+	background: $main_box_color;
+}
+
+.invert .widget-carousel .swiper-slide {
+	background: $footer_widgets_bg_top;
+}

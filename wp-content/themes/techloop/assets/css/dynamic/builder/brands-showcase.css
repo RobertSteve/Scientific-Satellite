@@ -1,0 +1,31 @@
+#tm_builder_outer_content .tm_pb_brands_showcase_module__wrapper {
+	background: $main_box_color;
+}
+
+#tm_builder_outer_content .tm_pb_brands_showcase_module__wrapper .tm_pb_brands_showcase_module__super-title {
+	font-size: $h3_font_size{px};
+}
+
+#tm_builder_outer_content .tm_pb_brands_showcase_module__wrapper .tm_pb_brands_showcase_module__title {
+	font-size: $h5_font_size{px};
+}
+
+#tm_builder_outer_content .tm_pb_brands_showcase_module__wrapper .tm_pb_brands_showcase_module__sub-title {
+	font-size: $h6_font_size{px};
+}
+
+#tm_builder_outer_content .tm_pb_brands_showcase_module__wrapper .tm_pb_brands_showcase_module__brands .tm_pb_brands_showcase_module__item__title {
+	font-size: $h5_font_size{px};
+	color: $regular_h5_color;
+
+}
+
+#tm_builder_outer_content .tm_pb_brands_showcase_module__brands .tm_pb_brands_showcase_module__item__description {
+	font-size: $body_font_size{px};
+	font-weight: $body_font_weight;
+}
+
+#tm_builder_outer_content .tm_pb_brands_showcase_module__wrapper .tm_pb_brands_showcase_module__brands.swiper-container .swiper-button-next,
+#tm_builder_outer_content .tm_pb_brands_showcase_module__wrapper .tm_pb_brands_showcase_module__brands.swiper-container .swiper-button-prev {
+	background-color: $invert_accent_color_1;
+}

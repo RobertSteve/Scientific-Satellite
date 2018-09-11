@@ -1,0 +1,147 @@
+/* Change default styles for Cherry PopUp plugin */
+$cherry-popup-inset: 80px;
+$cherry-popup-offset: 0 80px;
+$cherry-popup-submit-fz: 14px;
+$cherry-popup-submit-lh: inherit;
+$cherry-popup-submit-ls: 0.1em;
+$cherry-popup-submit-padding: 8px 30px;
+
+.cherry-popup {
+	.cherry-popup-title {
+		h3 {
+			padding-top: 15px;
+			&:before {
+				width: 18px;
+				height: 3px;
+			}
+		}
+	}
+
+	.cherry-popup-close-button {
+		top: 26px;
+		right: 28px;
+
+		span {
+			&:before {
+				content: '\e935';
+				@include linear-icon();
+			}
+		}
+	}
+
+	.cherry-popup-container {
+		padding-top: $cherry-popup-inset;
+		background-repeat: no-repeat;
+		background-size: cover;
+		&__inner {
+			margin: 0 30px;
+
+			@include media-breakpoint-up(md) {
+				margin: $cherry-popup-offset;
+			}
+		}
+	}
+
+	.cherry-popup-subscribe {
+		max-width: 500px;
+
+		&__form {
+			position: relative;
+		}
+
+		&__input-group {
+			@include flex-flow(row wrap);
+
+			@include media-breakpoint-up(sm) {
+				@include flex-flow(row nowrap);
+			}
+		}
+
+		&__submit {
+			font-size: $cherry-popup-submit-fz;
+			letter-spacing: $cherry-popup-submit-ls;
+			padding: $cherry-popup-submit-padding;
+			text-transform: none;
+			transition: .3s;
+			margin-left: 0;
+			text-align: center;
+			margin-top: 10px;
+			width: 100%;
+
+			@include media-breakpoint-up(sm) {
+				margin-left: 10px;
+				margin-top: 0;
+				width: auto;
+			}
+		}
+
+		&__input-label {
+			position: relative;
+			@include flex(1 1 auto);
+
+			i {
+				content: '';
+				pointer-events: none;
+				position: absolute;
+				top: 50%;
+				font-size: 18px;
+				left: 14px;
+				transform: translateY(-50%);
+			}
+
+			input {
+				padding-left: 40px;
+				width: 100%;
+				box-shadow: none;
+			}
+		}
+
+		&__message {
+			position: absolute;
+			bottom: -17px;
+			font-size: 12px;
+			line-height: 1;
+			color: $color__not-valid;
+		}
+	}
+
+	.cherry-popup-show-again-check {
+		bottom: 65px;
+		left: 80px;
+	}
+
+	.cherry-popup-show-again-check {
+		.marker {
+			margin-right: 10px;
+			border-radius: 0;
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+
+		.cherry-popup-subscribe__input{
+			line-height: 26px;
+		}
+
+		.cherry-popup-title,
+		.cherry-popup-content {
+			margin-bottom: 5px;
+		}
+
+		.cherry-popup-subscribe-form {
+			margin-bottom: 15px;
+		}
+
+		.cherry-popup-show-again-check {
+			bottom: 40px;
+			left: 30px;
+		}
+	}
+}
+
+.cherry-popup .cherry-popup-title h3 {
+	padding-top: 0;
+	&::before {
+		display: none;
+	}
+}

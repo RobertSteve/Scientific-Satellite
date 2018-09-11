@@ -1,0 +1,113 @@
+.comment {
+	&-respond {
+		position: relative;
+		margin-right: -$grid-gutter-width / 2;
+		margin-left: -$grid-gutter-width / 2;
+		padding: 63px $grid-gutter-width / 2 60px;
+		overflow: hidden;
+		z-index: 1;
+		border-top: 1px solid $color__background-hr;
+
+		body:not(.position-fullwidth) & {
+			&:after {
+				display: none;
+			}
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: -5000px;
+			bottom: 0;
+			left: -5000px;
+			display: block;
+			z-index: -1;
+		}
+
+		.comment-list + &,
+		.comment-list & {
+			border-top: 1px solid transparent;
+
+			&:after {
+				display: none;
+			}
+		}
+
+		.comment-list & {
+			margin-top: 20px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			margin-right: 0;
+			margin-left: 0;
+			padding-right: 0;
+			padding-left: 0;
+			overflow: visible;
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: -1px;
+				right: -5000px;
+				left: -5000px;
+				height: 1px;
+				display: block;
+				z-index: -2;
+				background: $color__background-hr;
+			}
+		}
+	}
+
+	&-reply-title {
+		margin-bottom: 18px;
+
+		#cancel-comment-reply-link {
+			float: right;
+			margin: 1px 0 9px 10px;
+			border-bottom: 1px solid;
+
+			&:hover {
+				border-bottom-color: transparent;
+			}
+		}
+	}
+
+	&-form {
+		&-comment,
+		&-author,
+		&-email,
+		&-url {
+			position: relative;
+			margin: 0 0 18px 0;
+		}
+
+		.form-submit {
+			margin: 30px 0 0 0;
+		}
+
+		&__field {
+			width: 100%;
+			vertical-align: top;
+		}
+
+		.logged-in-as,
+		.comment-notes {
+			margin: 0 0 15px;
+		}
+
+		.required {
+			@include font-size(22/16);
+		}
+	}
+}
+
+.woocommerce{
+	#review_form{
+		#respond p{
+			margin: 0;
+		}
+	}
+}

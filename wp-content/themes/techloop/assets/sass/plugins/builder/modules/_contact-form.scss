@@ -1,0 +1,142 @@
+#tm_builder_outer_content {
+
+	.tm_pb_contact_form_input{
+		&.tm_pb_contact_message{
+			margin-bottom: 10px;
+			min-height: 190px;
+		}
+	}
+
+	.tm_pb_contact_form {
+		position: relative;
+
+		form{
+			max-width: 570px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&.tm_pb_module {
+			padding: $padding-box-md * .525 $padding-box-md $padding-box-md;
+
+			@include media-breakpoint-only(lg) {
+				padding: $padding-box-sm * .8 $padding-box-sm $padding-box-sm * 1.5;
+			}
+
+			> .tm_pb_module.tm_pb_contact_form {
+				padding: 0;
+			}
+		}
+
+		.tm_contact_bottom_container {
+			position: relative;
+			overflow: visible;
+			text-align: center;
+			float: none;
+		}
+
+		&.tm_pb_contact_form_btn_center {
+			.tm_contact_bottom_container {
+				text-align: center;
+			}
+		}
+
+		&_label {
+			text-transform: none;
+			position: relative;
+
+			&:after{
+				content: '*';
+				display: inline-block;
+
+			}
+		}
+	}
+
+	div.tm_pb_contact_right {
+		margin-top: 10px;
+	}
+
+	.tm_pb_contact_main_title {
+		margin-top: 25px;
+		margin-bottom: 0;
+	}
+
+	.tm_pb_contact_submit {
+		margin-top: 10px;
+	}
+
+	.tm_pb_contact_field {
+		text-align: left;
+		width: 100%;
+	}
+
+	.tm_contact_error {
+		border: 1px solid $color__not-valid;
+	}
+
+	.cf-success-message {
+		background: rgba($color__valid, .9);
+		display: block;
+	}
+
+	.tm_pb_contact_form .tm-pb-contact-message {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border: none;
+		background: $color__not-valid;
+		text-transform: none;
+		padding: 10px;
+		@include font-size(.875);
+		@include border-radius;
+
+		&:empty{
+			display: none;
+		}
+
+		> * {
+			padding: 5px 15px;
+		}
+
+		> ul {
+			padding: 5px 15px 5px 15px;
+		}
+
+		.tm_pb_contact_error_text {
+			display: block;
+		}
+
+		p,
+		ul {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+
+		ul {
+			margin-left: 0;
+		}
+
+		ul + p::before {
+			content: "";
+			display: block;
+		}
+
+		ul li {
+			display: inline-block;
+
+			&:before {
+				content: none;
+			}
+
+			& + li {
+				margin-top: 0;
+
+				&::before {
+					content: ",";
+					display: inline-block;
+					margin-right: 3px;
+				}
+			}
+		}
+	}
+}

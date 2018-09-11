@@ -1,0 +1,51 @@
+h1 {
+	margin: 0 0 9px;
+}
+
+h2 {
+	margin: 0 0 20px;
+}
+
+h3,
+.h3-style {
+	position: relative;
+	margin: 0 0 18px;
+	padding-top: 27px;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 37px;
+		height: 4px;
+		display: block;
+	}
+}
+
+h4 {
+	margin: 0 0 17px;
+}
+
+h5 {
+	margin: 0 0 21px;
+}
+
+h6 {
+	margin: 0 0 14px;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1-style, .h2-style, .h3-style, .h4-style, .h5-style, .h6-style {
+	text-transform: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	p + & {
+		margin-top: 47px;
+	}
+}

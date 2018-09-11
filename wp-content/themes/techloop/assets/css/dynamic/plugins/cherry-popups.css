@@ -1,0 +1,45 @@
+.cherry-popup-wrapper h3,
+.cherry-popup-wrapper.dark-style .cherry-popup-show-again-check .label,
+.cherry-popup-wrapper.dark-style .cherry-popup-close-button{
+	color: $invert_accent_color_1;
+}
+.cherry-popup-wrapper.dark-style{
+	color: $regular_text_color;
+}
+
+.cherry-popup-wrapper h3{
+	font-style: $h5_font_style;
+	font-weight: $h5_font_weight;
+	font-size: $h5_font_size{px};
+	line-height: $h5_line_height;
+	font-family: @font_family( $h5_font_family );
+	letter-spacing: $h5_letter_spacing{em};
+	text-align: $h5_text_align;
+}
+
+.cherry-popup-wrapper.dark-style .cherry-popup-close-button:hover{
+	color: $regular_accent_color_1;
+}
+
+.cherry-popup-wrapper.dark-style .cherry-popup-subscribe__submit{
+	color: $invert_accent_color_1;
+	background: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+}
+
+.cherry-popup-wrapper.dark-style .cherry-popup-subscribe__submit:hover{
+	color: $regular_accent_color_2;
+	background: $invert_accent_color_1;
+	border-color: $invert_accent_color_1;
+}
+
+.cherry-popup-wrapper .cherry-popup-subscribe__input,
+.cherry-popup-wrapper.dark-style .cherry-popup-show-again-check .marker{
+	color: $regular_text_color;
+	background: @lighten($regular_accent_color_2, 17.25);
+	border-color: @lighten($regular_accent_color_2, 17.25);
+}
+
+.cherry-popup .cherry-popup-subscribe__input-label i{
+	color: $regular_accent_color_3;
+}

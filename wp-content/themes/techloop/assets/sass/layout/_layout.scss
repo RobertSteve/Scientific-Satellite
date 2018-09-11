@@ -1,0 +1,31 @@
+.site {
+	.container {
+		&.site-header,
+		&.site-content,
+		&.site-footer {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+.site-content_wrap {
+	padding: calc(40px - 10px) 15px;
+	margin-top: 0;
+}
+
+.content-layout-fullwidth {
+
+	.site .container {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+.tm_pb_column {
+	width: 100%;
+}
+
+.woocommerce-product-details__short-description {
+	margin-bottom: 15px;
+}

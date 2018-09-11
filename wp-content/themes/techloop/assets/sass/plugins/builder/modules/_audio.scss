@@ -1,0 +1,151 @@
+#tm_builder_outer_content {
+
+	.tm_pb_audio_module.tm_pb_module {
+		@include border-radius;
+		overflow: hidden;
+
+		.tm_audio_container {
+			padding: $padding-box-md .8 $padding-box-md $padding-box-md * 1.15;
+			text-align: left;
+
+			h2 {
+				margin-bottom: 17px;
+				padding-bottom: 0;
+			}
+
+			.tm_audio_module_meta {
+				margin-bottom: 22px;
+				text-transform: uppercase;
+			}
+
+			@include media-breakpoint-up(sm) {
+				padding: $padding-box-md * .8 $padding-box-md $padding-box-md * 2.15;
+			}
+		}
+
+		.tm_pb_audio_cover_art {
+			padding-bottom: 61.7%;
+		}
+	}
+
+	.tm_pb_column_3_4,
+	.tm_pb_column_4_4 {
+		.tm_pb_audio_module.tm_pb_module {
+			@include media-breakpoint-up(md) {
+
+				.tm_pb_audio_cover_art {
+					padding-bottom: 17%;
+					min-height: 250px;
+					float: left;
+					position: relative;
+				}
+
+				.tm_pb_audio_module_content {
+					overflow: hidden;
+				}
+			}
+		}
+	}
+
+	.tm_pb_audio_module.tm_pb_module .tm_audio_container,
+	.tm_pb_module .tm_audio_content .tm_audio_container {
+		.mejs-controls {
+			// Play-pause button
+			.mejs-playpause-button {
+				width: 40px;
+				height: 40px;
+
+				button:before {
+					content: '\e96a';
+					@include linear-icon;
+					@include font-size(2.5);
+				}
+
+				&.mejs-pause button:before {
+					content: '\e96b';
+				}
+			}
+
+			// Time slider, volume slider
+			.mejs-time-rail .mejs-time-total,
+			.mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+				margin: 19px 0;
+				height: 2px;
+				background: #000;
+			}
+
+			.mejs-time-rail .mejs-time-current,
+			.mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+				height: 2px;
+			}
+
+			.mejs-time-rail .mejs-time-handle {
+				width: 13px;
+				height: 13px;
+			}
+
+			.mejs-horizontal-volume-slider .mejs-horizontal-volume-handle {
+				width: 13px;
+				height: 13px;
+				top: 14px;
+			}
+
+			.mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+				top: 19px
+			}
+
+			.mejs-time-float .mejs-time-float-current,
+			.mejs-controls .mejs-time {
+				color: #fff;
+			}
+
+			.mejs-time-float .mejs-time-float-corner {
+				border-color: #fff transparent transparent;
+			}
+
+			// Current time
+			.mejs-time.mejs-currenttime-container {
+				margin-top: 9px;
+				height: auto;
+				margin-left: 10px;
+			}
+
+			.mejs-currenttime {
+				@include font-size(.75);
+			}
+
+			// Volume button
+			.mejs-volume-button {
+				margin: 0 5px 0 10px;
+
+				button {
+					width: 28px;
+					height: 28px;
+					margin: 4px 0;
+					overflow: visible;
+
+					&:before {
+						content: '\e8b0';
+						@include linear-icon;
+						@include font-size(1.75);
+					}
+				}
+
+				&.mejs-unmute button:before {
+					content: '\e8b4';
+				}
+			}
+		}
+	}
+}
+
+#tm_builder_outer_content {
+
+	.tm_pb_audio_module.tm_pb_module {
+		.tm_audio_container {
+			.tm_audio_module_meta {
+				text-transform: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+.site-footer.centered {
+	.site-info {
+		text-align: center;
+
+		> * + *{
+			margin-top: 37px;
+		}
+
+		> * + .social-list{
+			margin: 31px 0;
+
+			@include media-breakpoint-up(xl) {
+				margin: 71px 0 50px;
+			}
+		}
+
+		> * + .footer-copyright{
+			margin: 29px 0 35px;
+		}
+	}
+}
+
+.site-footer.centered {
+	.footer-container {
+		padding-bottom: 70px;
+	}
+	.site-info > * + .social-list {
+		margin-bottom: 0;
+	}
+}

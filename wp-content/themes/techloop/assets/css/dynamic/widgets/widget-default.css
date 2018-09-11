@@ -1,0 +1,343 @@
+.widget {
+	background: $main_box_color;
+	font-family: $h6_font_family;
+	font-style: $h6_font_style;
+	font-weight: $h6_font_weight;
+	line-height: $h6_line_height;
+	letter-spacing: $h6_letter_spacing{em};
+}
+
+/* #Widget Calendar */
+.widget_calendar caption {
+	font-family: $h5_font_family;
+	font-style: $h5_font_style;
+	font-weight: $h5_font_weight;
+	line-height: $h5_line_height;
+	letter-spacing: $h5_letter_spacing{em};
+	color: $invert_text_color;
+	background: $regular_accent_color_3;
+}
+
+.widget_calendar thead {
+	color: $invert_accent_color_1;
+	background: $regular_accent_color_2;
+}
+
+.widget.widget_calendar table thead th {
+	border-color: @lighten($regular_accent_color_2, 12.16);
+}
+
+.widget_calendar tbody td:not(.pad),
+#tm_builder_outer_content .tm_pb_widget_area .widget_calendar table tbody td:not(.pad) {
+	color: $regular_text_color;
+}
+
+.widget.widget_calendar table tbody td {
+	font-family: $meta_font_family;
+	font-style: $meta_font_style;
+	font-weight: $meta_font_weight;
+	letter-spacing: $meta_letter_spacing{em};
+}
+
+.widget_calendar tbody td a,
+#tm_builder_outer_content .tm_pb_widget_area .widget_calendar table tbody td a {
+	background-color: @darken($invert_accent_color_1, 3.52);
+	color: $regular_text_color;
+}
+
+.widget_calendar tbody td#today,
+#tm_builder_outer_content .tm_pb_widget_area .widget_calendar table tbody td#today {
+	background-color: $regular_accent_color_1;
+	color: $invert_text_color;
+}
+
+.widget.widget_calendar #prev a:before,
+.widget.widget_calendar #next a:before {
+	color: $invert_accent_color_1;
+}
+
+/* #Widget Tag Cloud */
+.tagcloud a {
+	color: $regular_accent_color_1;
+	background-color: @darken($main_box_color, 3.53);
+	border-color: @darken($main_box_color, 3.53);
+}
+
+.invert .tagcloud a {
+	color: $regular_accent_color_1;
+	background-color: $footer_widgets_bg_top;
+	border-color: @lighten($footer_widgets_bg_top, 12.156862745098037%);
+}
+
+
+.tagcloud a:hover {
+	color: $invert_text_color;
+	background-color: $footer_bg;
+	border-color: $regular_accent_color_3;
+}
+
+.woocommerce.widget_product_tag_cloud .tagcloud a{
+	color: $invert_accent_color_1;
+	background:$regular_accent_color_2;
+}
+
+.woocommerce.widget_product_tag_cloud .tagcloud a:hover{
+	background: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+}
+
+.invert .tagcloud a:hover {
+	color: $invert_accent_color_1;
+	background-color: $footer_widgets_bg_top;
+	border-color: $regular_accent_color_3;
+}
+
+/* #Widget Recent Posts - Comments, Archive */
+.widget_recent_entries a,
+.widget_recent_comments a,
+.widget_archive a {
+	color: $regular_link_hover_color;
+}
+
+.invert .widget_recent_entries a,
+.invert .widget_recent_comments a,
+.invert .widget_archive a{
+	color: $invert_accent_color_1;
+}
+
+.invert .widget_recent_comments .comment-author-link{
+	color: $regular_accent_color_1;
+}
+
+.widget_recent_entries a:hover,
+.widget_recent_comments a:hover,
+.widget_archive a:hover {
+	color: $regular_link_color;
+}
+
+.invert .widget_recent_entries a:hover,
+.invert .widget_recent_comments a:hover,
+.invert .widget_archive a:hover {
+	color: $invert_link_hover_color;
+}
+
+.widget_recent_entries .post-date {
+	font-family: $meta_font_family;
+	font-style: $meta_font_style;
+	font-weight: $meta_font_weight;
+	line-height: $meta_line_height;
+	letter-spacing: $meta_letter_spacing{em};
+}
+
+/* #Widget categories */
+.widget_archive ul li,
+.widget_categories ul li,
+.widget_product_categories ul li,
+.widget_pages ul li,
+.widget_meta ul li,
+.widget_rss ul li,
+.widget_layered_nav ul li,
+.widget_layered_nav_filters ul li,
+.widget_rating_filter ul li,
+.widget_nav_menu ul li {
+	font-family: $meta_font_family;
+	font-style: $meta_font_style;
+	font-weight: $meta_font_weight;
+	line-height: $meta_line_height;
+	letter-spacing: $meta_letter_spacing{em};
+	color: $regular_accent_color_1;
+}
+
+.widget_archive ul li a,
+.widget_categories ul li a,
+.widget_product_categories ul li a,
+.widget_pages ul li a,
+.widget_meta ul li a,
+.widget_rss ul li a,
+.widget_layered_nav ul li a,
+.widget_layered_nav_filters ul li a,
+.widget_rating_filter ul li a,
+.widget_nav_menu ul li a {
+	color: $regular_text_color;
+}
+
+.widget_archive ul li a:hover,
+.widget_categories ul li a:hover,
+.widget_product_categories ul li a:hover,
+.widget_pages ul li a:hover,
+.widget_meta ul li a:hover,
+.widget_rss ul li a:hover,
+.widget_layered_nav ul li a:hover,
+.widget_layered_nav_filters ul li a:hover,
+.widget_rating_filter ul li a:hover,
+.widget_nav_menu ul li a:hover {
+	color: $regular_link_color;
+}
+
+.widget_nav_menu ul li.current-menu-item > a,
+.widget_categories ul li.current-cat > a,
+.widget_product_categories ul li.current-cat > a,
+.widget_pages ul li.current_page_item a {
+	color: $regular_accent_color_1;
+}
+
+.widget_nav_menu ul li.current-menu-item > a:hover,
+.widget_categories ul li.current-cat > a:hover,
+.widget_product_categories ul li.current-cat > a:hover,
+.widget_pages ul li.current_page_item a:hover {
+	color: $regular_accent_color_2;
+}
+
+/* #Widget rss */
+.widget_rss .rss-date,
+.widget_rss .rssSummary {
+	color: $regular_text_color;
+}
+
+.widget_rss .rsswidget {
+	color: $regular_link_hover_color;
+}
+
+.invert .widget_rss .rsswidget {
+	color: $invert_accent_color_1;
+}
+
+.invert .widget_rss .rsswidget:hover {
+	color: $regular_accent_color_1;
+}
+
+.widget_rss cite {
+	color: $regular_accent_color_1;
+}
+
+/* #Widget TM about store */
+.widget.tm_about_store_widget .tm_about_store_widget_bg .widget-title:after{
+	background: $regular_accent_color_1;
+}
+
+.sidebar .widget.tm_about_store_widget .widget-title,
+.tm_pb_column_1_4 .widget.tm_about_store_widget .widget-title,
+.tm_pb_column_1_3 .widget.tm_about_store_widget .widget-title,
+.footer-area:not(.footer-area--fullwidth) .widget.tm_about_store_widget .widget-title,
+.after-loop-area .widget.tm_about_store_widget .widget-title{
+	color: $invert_text_color;
+	font-family: $h3_font_family;
+	font-style: $h3_font_style;
+	font-weight: $h3_font_weight;
+	font-size: $h3_font_size{px};
+	line-height: $h3_line_height;
+	letter-spacing: $h3_letter_spacing{em};
+}
+
+.widget.tm_about_store_widget .btn{
+	background: $regular_accent_color_3;
+	border-color: $regular_accent_color_3;
+}
+
+.widget.tm_about_store_widget .btn:hover{
+	background: $regular_accent_color_2;
+	border-color: $regular_accent_color_2;
+}
+
+/* #Widget about author */
+.widget-about-author.invert {
+	background: $regular_accent_color_2;
+}
+
+.widget-about-author.invert .about-author_description {
+	color: $regular_text_color;
+	font-family: $body_font_family;
+	font-style: $body_font_style;
+	font-weight: $body_font_weight;
+	font-size: $body_font_size{px};
+	line-height: $body_line_height;
+	letter-spacing: $body_letter_spacing{em};
+}
+
+.widget-about-author.invert .btn {
+	color: $invert_link_color;
+	background-color: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+}
+
+.widget-about-author.invert .btn:hover {
+	color: $regular_link_hover_color;
+	background-color: $invert_accent_color_1;
+	border-color: $invert_accent_color_1;
+}
+
+/* #Widget tag cloud techloop */
+.widget-about__tagline {
+	color: $regular_accent_color_2;
+}
+
+.widget_tag_cloud a{
+	color: $regular_accent_color_1;
+	border-color: @darken($regular_text_color, 34.50980392156863%);
+	font-weight: $body_font_weight;
+}
+
+.sidebar .widget.tm_about_store_widget .widget-title,
+.tm_pb_column_1_4 .widget.tm_about_store_widget .widget-title,
+.tm_pb_column_1_3 .widget.tm_about_store_widget .widget-title,
+.footer-area:not(.footer-area--fullwidth) .widget.tm_about_store_widget .widget-title,
+.after-loop-area .widget.tm_about_store_widget .widget-title{
+	color: $regular_accent_color_2;
+	font-family: @font-family($h3_font_family);
+	font-style: $h3_font_style;
+	font-weight: $h3_font_weight;
+font-size: $h3_font_size{px};
+line-height: $h3_line_height;
+letter-spacing: $h3_letter_spacing{em};
+}
+
+.widget.tm_about_store_widget .btn{
+	background: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+}
+
+.widget-about-author.invert{
+	background: $main_box_color;
+	color: $regular_text_color;
+}
+.widget-about-author.invert h5{
+	color: $regular_accent_color_2;
+}
+
+.widget-about-author.invert .btn:hover{
+	color: $invert_link_color;
+	background: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+}
+
+.widget-about-author.invert .btn{
+	border-color: $regular_accent_color_2;
+}
+
+.widget-about-author.invert .btn,
+.widget-subscribe .follow-block,
+.follow-block .social-list__items li a{
+	background: $regular_accent_color_2;
+}
+
+.invert .contact-information-widget .icon{
+	color: $invert_text_color;
+}
+
+.invert .tagcloud a{
+	color: $regular_text_color;
+}
+
+.invert .tagcloud a:hover{
+	border-color: $regular_accent_color_1;
+}
+
+.tm-posts_layout-3 .btn:hover,
+.post .btn-secondary:hover{
+	background: $regular_accent_color_2;
+	border-color: $regular_accent_color_2;
+}
+
+.invert .widget-subscribe .btn:hover{
+	background: $regular_accent_color_3;
+}

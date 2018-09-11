@@ -1,0 +1,141 @@
+.swiper,
+.swiper-container.swiper-container-horizontal .swiper {
+	&-pagination {
+		position: absolute;
+		bottom: 10px;
+
+		.footer-area &,
+		.second-footer-area &{
+			bottom: -10px;
+		}
+
+		.posts-list:not(.posts-list--default) .post-gallery &,
+		.posts-list--default.featured-image--small .post-gallery & {
+			position: absolute;
+			bottom: 15px;
+		}
+
+		.widget-carousel &,
+		.tm_pb_swiper & {
+			position: static;
+		}
+
+		&-bullet {
+			position: relative;
+			width: 12px;
+			height: 12px;
+			margin: 0 17px 10px;
+			opacity: 1;
+			transition: all .4s ease;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 22px;
+				height: 22px;
+				margin-top: -11px;
+				margin-left: -11px;
+				border-radius: 50%;
+				transition: all .4s ease;
+				@include transform(scale(0));
+			}
+
+			&:hover,
+			&.swiper-pagination-bullet-active {
+				&:before {
+					@include transform(scale(1));
+				}
+			}
+		}
+	}
+
+	&-button-next,
+	&-button-prev {
+		top: auto;
+		bottom: 0;
+		display: none;
+		width: 60px;
+		height: 45px;
+		z-index: 11;
+		margin: 0;
+		padding-right: 5px;
+		padding-left: 5px;
+		background-image: none !important;
+		text-align: center;
+		transition: .3s;
+
+		.invert &,
+		.invert &:hover {
+			background: transparent;
+		}
+
+		i {
+			position: relative;
+			left: 0;
+			display: block;
+			transition: all .3s linear;
+			font-size: 20px;
+			line-height: 45px;
+		}
+
+		&.swiper-button-disabled {
+			opacity: 1;
+			pointer-events: auto;
+			cursor: not-allowed;
+
+			i,
+			&:after {
+				@include transform(scale(.5));
+			}
+		}
+	}
+
+	&-button-next {
+		right: 0;
+		text-align: left;
+		@include border-left-radius($border__radius);
+
+		&.swiper-button-disabled {
+			i,
+			&:after {
+				@include transform(scale(.5));
+			}
+		}
+	}
+
+	&-button-prev {
+		right: 60px;
+		left: auto;
+		text-align: right;
+		@include border-right-radius($border__radius);
+
+		&.swiper-button-disabled {
+			i,
+			&:after {
+				@include transform(scale(.5));
+			}
+		}
+	}
+}
+
+.footer-area-wrap {
+	.footer-area,
+	.second-footer-area {
+		&:not(.footer-area--fullwidth) .widget.widget-carousel {
+			.swiper-button-prev,
+			.swiper-button-next{
+				width: 30px;
+			}
+
+			.swiper-button-prev{
+				right: 30px;
+			}
+
+			.widget-title {
+				padding: 15px 0 0 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,109 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+select,
+textarea {
+
+	padding: $input__indents_y $input__indents_x;
+	border: 1px solid $color__background-input;
+	border-radius: 0;
+	 -webkit-appearance: none;
+	background-color: $color__background-input;
+	font-size: 14px;
+	line-height: 1.8em;
+	transition: .3s;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	box-shadow: none;
+
+	&.comment-form__field,
+	.wpcf7 i + .wpcf7-form-control-wrap > & {
+		padding-left: $input__indents_x;
+	}
+
+
+	&:focus {
+		outline: 0;
+		border: 1px solid $color__border-input;
+		background-color: transparent;
+	}
+	.invert &:focus,
+	.tm_pb_with_background &:focus {
+		background-color: $color__background-input;
+	}
+
+
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+	&:focus {
+		outline: 0;
+	}
+}
+
+select {
+	border: 1px solid $color__border-input;
+	background-image: url(assets/images/arrow-down.png);
+	background-repeat: no-repeat;
+	background-position: calc(100% - 16px) 20px;
+}
+
+textarea {
+	width: 100%;
+	height: 155px;
+	min-height: 155px;
+	max-height: 205px;
+
+	@include resizable(vertical);
+}
+
+::-moz-placeholder {
+	opacity: 1;
+}
+
+:-moz-placeholder {
+	opacity: 1;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"]:checked + label:before {
+	background: $radio_btn_bg;
+}
+
+input[type="radio"] + label {
+	position: relative;
+	display: block !important;
+	text-transform: none;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: -30px;
+		top: 50%;
+		@include transform(translateY(-50%));
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		border: 7px solid $color__background-input;
+		background: $color__background-input;
+	}
+}

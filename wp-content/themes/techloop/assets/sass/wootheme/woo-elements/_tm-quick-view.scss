@@ -1,0 +1,150 @@
+.tm-quick-view-popup .tm-quick-view-popup__content {
+	min-height: 100%;
+	max-height: 100vh;
+	overflow-y: scroll;
+	width: 100%;
+	min-width: 290px;
+	padding: 20px;
+
+	@include media-breakpoint-down(lg){
+		max-width: 70%;
+		padding: 40px;
+
+		.woocommerce.single-product div.product form.cart .variations select,
+		.woocommerce .single-product div.product form.cart .variations select,
+		.woocommerce.single-product div.product .summary .wishlist_compare_button_block,
+		.woocommerce .single-product div.product .summary .wishlist_compare_button_block{
+			width: 100%;
+		}
+	}
+
+
+	@include media-breakpoint-down(sm){
+		max-width: 100%;
+		padding: 10px;
+	}
+
+	.woocommerce.single-product {
+		div.product {
+			form.cart {
+				div.quantity input.qty {
+					padding: 16.5px 20px;
+				}
+			}
+		}
+	}
+}
+
+$arrow-line-deg: 45deg;
+
+.tm-quick-view-popup {
+
+	button.quick-view-buttons {
+		width: 60px;
+		height: 60px;
+		transition: .6s;
+		-webkit-transition-delay: .6s;
+		-moz-transition-delay: .6s;
+		-ms-transition-delay: .6s;
+		-o-transition-delay: .6s;
+		transition-delay: .6s;
+		opacity: 1;
+
+		@include media-breakpoint-down(sm){
+			bottom: 0;
+		}
+
+		&:before,
+		&:after {
+			content: '';
+			border: none;
+			width: 20px;
+			height: 1px;
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			transition: .3s;
+
+			@include media-breakpoint-up(xxl){
+				width: 50px;
+			}
+		}
+
+		&.quick-view-prev {
+			border: none;
+			position: absolute;
+			left: 0;
+
+			&:before,
+			&:after {
+				left: 20px;
+				transform-origin: 0 center;
+			}
+
+			&:before {
+				transform: rotate(-$arrow-line-deg);
+			}
+
+			&:after {
+				transform: rotate($arrow-line-deg);
+			}
+		}
+
+		&.quick-view-next {
+			border: none;
+			position: absolute;
+			right: 0;
+
+			&:before,
+			&:after {
+				right: 20px;
+				left: auto;
+				transform-origin: 100% center;
+			}
+
+			&:before {
+				transform: rotate($arrow-line-deg);
+			}
+
+			&:after {
+				transform: rotate(-$arrow-line-deg);
+			}
+		}
+	}
+}
+
+.tm-quick-view-popup{
+	button.quick-view-close {
+		position: absolute;
+		z-index: 99999;
+		background: none;
+		padding: 0;
+		margin: 0;
+		box-shadow: none;
+		border-radius: 0;
+		border: none;
+		font-size: 0;
+		right: 10px;
+		top: 40px;
+		opacity: 1;
+		&:after{
+			content: '\e935';
+			@include linear-icon();
+			display: inline-block;
+			width: 60px;
+			height: 60px;
+			font-size: 20px;
+			line-height: 60px;
+			text-decoration: inherit;
+			font-weight: 400;
+			vertical-align: top;
+			text-align: center;
+		}
+	}
+}
+
+.quick-view-product{
+	.product{
+		border: none;
+	}
+}

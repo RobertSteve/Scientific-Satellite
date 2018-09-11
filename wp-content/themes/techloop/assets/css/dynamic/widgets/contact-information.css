@@ -1,0 +1,12 @@
+/* #Contact-information*/
+.contact-information-widget .icon {
+	color: $regular_accent_color_1;
+}
+
+.contact-information-widget .contact-information__item {
+	color: $regular_accent_color_2;
+}
+
+.invert .contact-information-widget .contact-information__item {
+	color: $regular_text_color;
+}

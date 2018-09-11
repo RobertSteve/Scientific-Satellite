@@ -1,0 +1,43 @@
+.site-footer {
+	@include font-size(.875);
+	line-height: 1.714285;
+
+	.widget{
+		background: transparent;
+	}
+}
+
+.footer-container {
+	padding: 19px 0 ;
+	text-transform: none;
+	.site-footer.centered & {
+		padding-top: 70px;
+		padding-bottom: 80px;
+	}
+}
+
+.site-info {
+	.footer-logo,
+	.social-list,
+	.footer-copyright {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+.footer-copyright {
+	font-size: 12px;
+	line-height: 1.2em;
+	text-transform: none;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+.footer-area-wrap{
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+@import "footer/layout-default";
+@import "footer/layout-centered";
+@import "footer/layout-minimal";

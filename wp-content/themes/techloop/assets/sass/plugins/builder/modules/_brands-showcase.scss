@@ -1,0 +1,66 @@
+#tm_builder_outer_content {
+	.tm_pb_brands_showcase_module__wrapper {
+		padding: $padding-box-md * .8 $padding-box-md $padding-box-md * .05;
+
+		@include media-breakpoint-only(lg) {
+			padding: $padding-box-sm * 1.1 $padding-box-sm $padding-box-sm * .1;
+		}
+
+		&[class*="tm_pb_brands_showcase_module_"] {
+			margin-bottom: 0;
+		}
+
+		.tm_pb_brands_showcase_module {
+			&__super-title,
+			&__title,
+			&__sub-title {
+				text-align: left;
+			}
+
+			&__divider {
+				margin: 30px 0;
+			}
+
+			&__brands {
+				margin-top: 31px;
+
+				&.swiper-container {
+					padding-bottom: 0;
+
+					.tm_pb_brands_showcase_module__item__wrapper {
+						&.swiper-slide {
+							margin-bottom: 0;
+							align-self: flex-start;
+						}
+					}
+
+					.swiper-pagination {
+						margin-top: 30px;
+					}
+				}
+
+				.tm_pb_brands_showcase_module__item {
+					& + * {
+						margin-top: 10px;
+					}
+
+					&__logo {
+						vertical-align: top;
+					}
+
+					&__wrapper {
+						margin-top: 0;
+						margin-bottom: $grid-gutter-width;
+					}
+
+					&__title,
+					&__description {
+						margin-top: 15px;
+						margin-bottom: 0;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+}

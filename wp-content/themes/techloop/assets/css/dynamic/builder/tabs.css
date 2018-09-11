@@ -1,0 +1,21 @@
+#tm_builder_outer_content .tm_pb_tabs {
+	background: $main_box_color;
+}
+
+#tm_builder_outer_content .tm_pb_tabs_controls li a {
+	color: $regular_link_hover_color;
+	font-family: $meta_font_family;
+	font-style: $meta_font_style;
+	font-weight: $meta_font_weight;
+	line-height: $meta_line_height;
+	letter-spacing: $meta_letter_spacing{em};
+}
+
+#tm_builder_outer_content .tm_pb_tabs_controls li.tm_pb_tab_active a,
+#tm_builder_outer_content .tm_pb_tabs_controls li a:hover {
+	color: $regular_link_color;
+}
+
+#tm_builder_outer_content .tm_pb_module.tm_pb_tabs .tm_pb_tabs_controls li.tm_pb_tab_active a {
+	border-color: $regular_accent_color_3;
+}

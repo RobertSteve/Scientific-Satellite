@@ -1,0 +1,40 @@
+#tm_builder_outer_content .tm_pb_number_counter.tm_pb_module {
+	position: relative;
+	padding: $padding-box-md * 1.25 $padding-box-md $padding-box-md * 2.5;
+
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 57px;
+		left: 50%;
+		display: block;
+		width: 37px;
+		height: 4px;
+		@include transform(translateX(-50%));
+	}
+
+	@include media-breakpoint-up(sm) {
+		padding: $padding-box-md * 2.75 $padding-box-md $padding-box-md * 4.3;
+
+		&:before {
+			bottom: 117px;
+		}
+	}
+
+	.percent {
+		@include font-size(72/16);
+		line-height: 1;
+		height: auto;
+		min-height: 55px;
+	}
+
+	h3 {
+		padding-top: 9px;
+		margin-bottom: 0;
+		@include text-ellipsis();
+
+		&:before {
+			display: none;
+		}
+	}
+}

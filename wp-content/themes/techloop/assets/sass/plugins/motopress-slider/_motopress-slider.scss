@@ -1,0 +1,97 @@
+/* Change default styles in Motopress slider plugin*/
+
+$slider-arrow-width: 20px;
+$slider-arrow-height: 20px;
+$slider-arrow-fz: 30px;
+$slider-arrow-lh: 20px;
+$slider-arrow-next-content: '\e93c';
+$slider-arrow-prev-content: '\e93b';
+$slider-bullet-width: 12px;
+$slider-bullet-height: 12px;
+
+.widget.widget_mpslwidget {
+	padding: 0;
+}
+
+.motoslider_wrapper {
+
+	// pagination styles
+	.ms_pagination {
+		.ms_bullet {
+			position: relative;
+			width: $slider-bullet-width;
+			height: $slider-bullet-height;
+			margin: 0 17px;
+			transition: all .4s ease;
+			border: none;
+			border-radius: 50%;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: calc(#{$slider-bullet-width} * 2);
+				height: calc(#{$slider-bullet-height} * 2);
+				margin-top: -11px;
+				margin-left: -11px;
+				border-radius: 50%;
+				transition: all .4s ease;
+				@include transform(scale(0));
+			}
+
+			&:hover,
+			&.ms_active {
+				&:before {
+					@include transform(scale(1));
+				}
+			}
+		}
+	}
+
+	// arrow styles
+	.ms_prev,
+	.ms_next {
+		font-size: $slider-arrow-fz;
+		line-height: $slider-arrow-lh;
+		width: $slider-arrow-width;
+		height: $slider-arrow-height;
+		background: transparent;
+		transition: .3s;
+
+		&:before {
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include linear-icon();
+			@include transform(translate(-50%, -50%));
+		}
+	}
+
+	.ms_prev {
+		&:before {
+			content: $slider-arrow-prev-content;
+		}
+	}
+
+	.ms_next {
+		&:before {
+			content: $slider-arrow-next-content;
+		}
+	}
+
+	.ms_layers_wrapper{
+		margin-left: 20px;
+		margin-right: 20px;
+
+		@include media-breakpoint-up(md){
+			margin-left: 40px;
+			margin-right: 40px;
+		}
+	}
+}
+
+#tm_builder_outer_content .tm_pb_module.tm_pb_widget_area .widget.widget_mpslwidget{
+	padding: 0;
+}

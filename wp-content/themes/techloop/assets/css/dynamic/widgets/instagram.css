@@ -1,0 +1,47 @@
+.instagram__cover {
+	color: $invert_text_color;
+	background-color: @alpha($regular_accent_color_1, 90%);
+}
+
+.widget.widget-instagram .no-photos {
+	color: $regular_accent_color_2;
+}
+
+.widget-instagram .instagram__date {
+	font-style: $meta_font_style;
+	color: $regular_accent_color_1;
+}
+
+.widget-instagram .instagram__caption {
+	color: $regular_accent_color_2;
+}
+
+.invert .widget.widget-instagram .no-photos,
+.invert .widget-instagram .instagram__caption {
+	color: $invert_accent_color_1;
+}
+
+
+
+.cs-instagram__cover {
+	color: $invert_text_color;
+	background-color: @alpha($regular_accent_color_1, 90%);
+}
+
+.widget.cs-instagram--widget .no-photos {
+	color: $regular_accent_color_2;
+}
+
+.cs-instagram--widget .cs-instagram__date {
+	font-style: $meta_font_style;
+	color: $regular_accent_color_1;
+}
+
+.cs-instagram--widget .cs-instagram__caption {
+	color: $regular_accent_color_2;
+}
+
+.invert .widget.cs-instagram--widget .no-photos,
+.invert .cs-instagram--widget .cs-instagram__caption {
+	color: $invert_accent_color_1;
+}

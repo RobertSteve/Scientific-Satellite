@@ -1,0 +1,139 @@
+.widget-subscribe,
+.widget-subscribe .subscribe-block {
+	background: $regular_accent_color_2;
+}
+
+.follow-block .social-list__items li a {
+	border: 1px solid @alpha($main_box_color, 20);
+	color: $invert_accent_color_1;
+}
+
+.invert .follow-block .social-list__items li a{
+	color: $regular_accent_color_1;
+	border-color: @darken($regular_text_color, 34.50980392156863%);
+}
+
+.invert .follow-block .social-list__items li a:hover{
+	color: $invert_accent_color_1;
+	border-color: $regular_accent_color_3;
+}
+
+.follow-block .social-list__items li a:hover {
+	border-color: $regular_accent_color_2;
+	background: $regular_accent_color_2;
+	color: $invert_accent_color_1;
+}
+
+.widget-subscribe .subscribe-block__input {
+	color: $regular_text_color;
+	background: @lighten($regular_accent_color_2, 17.25);
+	border-color: @lighten($regular_accent_color_2, 17.25);
+}
+
+.subscribe-block__input-wrap i {
+	color: $invert_accent_color_3;
+}
+
+.follow-block__message,
+.subscribe-block__message {
+	font-family: $body_font_family;
+	font-style: $body_font_style;
+	font-weight: $body_font_weight;
+	font-size: $body_font_size{px};
+	line-height: $body_line_height;
+	letter-spacing: $body_letter_spacing{em};
+}
+
+.follow-block__message,
+.follow-block .widget-title,
+.subscribe-block .widget-title{
+	color: $invert_text_color;
+}
+
+.subscribe-block__message {
+	color: $regular_text_color;
+}
+
+.widget-subscribe .not-api-key {
+	color: $invert_text_color;
+}
+
+.widget-subscribe .btn {
+	border-color: @alpha($main_box_color, 20);
+	background: $regular_accent_color_2;
+}
+
+.invert .widget-subscribe .btn {
+	border-color: $regular_accent_color_1;
+	background: $regular_accent_color_1;
+	color: $invert_accent_color_1;
+}
+
+.widget-subscribe .btn:hover {
+	border-color: $invert_accent_color_1;
+	background: $invert_accent_color_1;
+	color: $regular_accent_color_2;
+}
+
+.invert .widget-subscribe .btn:hover {
+	border-color: $regular_accent_color_3;
+	color: $invert_accent_color_1;
+}
+
+.widget-subscribe .btn,
+.follow-block .social-list__items li a:hover,
+.tm-posts_layout-3 .btn,
+.post .btn-secondary{
+	background: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+}
+
+.invert .widget-subscribe .subscribe-block__input,
+.sidebar .widget-subscribe .subscribe-block__input{
+	background: $invert_accent_color_1;
+	border-color: $invert_accent_color_1;
+}
+
+.subscribe-block__input-wrap i{
+	color: $regular_accent_color_2;
+}
+
+.entry-meta a,
+.post__tags a:hover,
+a.post__date-link{
+	color: $regular_accent_color_2;
+}
+
+.post-author-bio:before,
+blockquote:before{
+	background: $regular_accent_color_1;
+}
+
+.widget_calendar caption{
+	background: $regular_accent_color_1;
+}
+
+.invert .follow-block__message{
+	color: $regular_text_color;
+}
+
+
+.follow-block__message{
+	color: $regular_text_color;
+}
+
+.follow-block .widget-title,
+.subscribe-block .widget-title{
+	color: $regular_h1_color;
+}
+
+.invert .follow-block__message,
+.invert .follow-block .widget-title,
+.invert .subscribe-block .widget-title{
+	color: $invert_accent_color_1;
+}
+
+.sidebar .follow-block .widget-title,
+.sidebar .subscribe-block .widget-title{
+	color: $invert_text_color;
+}

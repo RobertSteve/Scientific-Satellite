@@ -1,0 +1,117 @@
+.mobile-panel {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	visibility: visible;
+	position: fixed;
+	z-index: 998;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+	border-bottom: 1px solid $color__background-hr;
+	padding: 10px;
+	height: 60px;
+
+	&.scroll {
+		box-shadow: $box__shadow_mobile;
+	}
+
+	.site-header-cart{
+		margin-left: 15px;
+	}
+
+	.woocommerce-currency-switcher-form {
+		margin-left: 20px;
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+
+		> *:not(.header-search) {
+			visibility: visible;
+			opacity: 1;
+			transition: all .3s ease-out;
+			.site-header.search-active & {
+				opacity: 0;
+				visibility: hidden;
+				transform: translateY(20px);
+			}
+		}
+		.header-search {
+			@include media-breakpoint-up(md) {
+				display: none;
+			}
+		}
+	}
+	&__menu-wrap{
+		position: relative;
+		margin-left: 20px;
+
+		&.dropdown {
+			i{
+				font-size: 20px;
+				border-radius: 620px;
+				&:before, &:after{
+					transition: 0.3s all ease;
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					line-height: 34px;
+					vertical-align: middle;
+				}
+				&:after{
+					@include linear-icon();
+					content: '\e92a';
+					opacity: 0;
+					visibility: hidden;
+					line-height: 34px;
+				}
+			}
+			&.opened i{
+				&:before{
+					visibility: hidden;
+					opacity: 0;
+				}
+				&:after{
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__menu-wrap i,
+	.header-search .search-form__toggle:before {
+		display: block;
+		cursor: pointer;
+		line-height: 33px;
+		vertical-align: middle;
+		text-align: center;
+		width: 34px;
+		height: 34px;
+	}
+
+	.header-search .search-form__toggle{
+		display: block;
+		top: 0;
+		border-radius: 620px;
+		&:before{
+			font-size: 18px;
+		}
+	}
+	.admin-bar &{
+		top: 46px;
+		@media (max-width: 600px) {
+			position: absolute;
+		}
+	}
+	@include media-breakpoint-up(md) {
+		display: none;
+		visibility: hidden;
+		left: -999em;
+		height: 0;
+	}
+}

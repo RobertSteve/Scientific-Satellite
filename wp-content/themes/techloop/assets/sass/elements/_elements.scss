@@ -1,0 +1,110 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+	vertical-align: top;
+}
+
+blockquote, q {
+	quotes: none;
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+#tm_builder_outer_content blockquote,
+blockquote {
+	position: relative;
+	min-height: 80px;
+	margin: 0 0 56px;
+	text-transform: none;
+	word-break: normal;
+
+	&:before {
+		content: "\201c";
+		width: 70px;
+		display: block;
+		margin-bottom: 15px;
+		text-align: center;
+		font-family: "Times New Roman";
+		font-size: 93px;
+		line-height: 1;
+		font-weight: 700;
+	}
+
+	p + & {
+		margin-top: 54px;
+	}
+
+	cite {
+		display: block;
+		margin-top: 7px;
+
+		&:before {
+			content: "— ";
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+		padding-left: 99px;
+
+		&:before{
+			position: absolute;
+			top: 7px;
+			bottom: 3px;
+			left: 0;
+			margin-bottom: 0;
+		}
+
+		.posts-list--default &.post-format-quote {
+			padding-right: 17%;
+		}
+	}
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin: 40px 0 50px;
+	clear: both;
+
+	@include media-breakpoint-up(lg) {
+		margin: 60px 0 70px;
+	}
+}
+
+/*--------------------------------------------------------------
+## Lists
+--------------------------------------------------------------*/
+@import "lists";
+
+/*--------------------------------------------------------------
+## Tables
+--------------------------------------------------------------*/
+@import "tables";
+
+/*--------------------------------------------------------------
+## Preloader
+--------------------------------------------------------------*/
+@import "page-preloader";
+
+/*--------------------------------------------------------------
+## ToTop button
+--------------------------------------------------------------*/
+@import "totop-button";

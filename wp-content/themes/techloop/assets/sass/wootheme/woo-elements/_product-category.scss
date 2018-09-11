@@ -1,0 +1,64 @@
+/**
+ * product-category.scss
+ * Governs the general look product category
+ * integrate with WooCommerce specifically.
+ *
+ */
+.products .product-category {
+	&.product-list >a {
+		width: auto;
+		padding: 30px;
+		border-right: 1px solid $color__background-hr;
+	}
+	>a {
+		display: inline-block;
+		position: relative;
+		width: 100%;
+
+		@include media-breakpoint-up(sm) {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		img {
+			display: block;
+		}
+	}
+	.title_count_block {
+		text-align: left;
+		padding: 5px 0 10px;
+		margin-bottom: 12px;
+		@include media-breakpoint-up(sm) {
+			padding: 0 0 10px;
+		}
+
+		.count{
+			position: relative;
+			top: -8px;
+		}
+
+		h3 {
+			display: block;
+			padding: 0;
+			margin: 0;
+			transition: 0.3s ease all;
+
+			&:before{
+				display: none;
+			}
+		}
+
+		a{
+			>span {
+				font-size: 12px;
+				line-height: 20px;
+				transition: 0.3s ease all;
+			}
+		}
+	}
+}
+
+.tm_pb_product_categories{
+	padding: 0;
+	border-top: 1px solid $color__background-hr;
+}

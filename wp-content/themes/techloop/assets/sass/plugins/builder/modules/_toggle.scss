@@ -1,0 +1,58 @@
+#tm_builder_outer_content .tm_pb_module.tm_pb_toggle {
+	border: none;
+	padding: $padding-box-md * .55 $padding-box-md $padding-box-md * .525;
+
+	@include media-breakpoint-only(lg) {
+		padding: $padding-box-sm * 1.1 $padding-box-sm $padding-box-sm * 1.05;
+	}
+
+	&:last-child {
+		margin-bottom: 30px;
+	}
+
+	+ .tm_pb_toggle {
+		.tm_pb_toggle_title {
+			&::after {
+				content: "";
+				position: absolute;
+				top: -22px;
+				left: 0;
+				right: 0;
+				border-top: 1px solid $color__background-hr;
+			}
+		}
+	}
+
+	.tm_pb_toggle_title {
+		padding: 10px 0 10px 35px;
+		margin: 0;
+
+		&::before {
+			content: "\e93c";
+			transition: .3s ease-in-out;
+			left: -2px;
+			margin-top: -0.6em;
+			@include linear-icon;
+			@include font-size(20/16);
+		}
+	}
+
+	&.tm_pb_toggle_close,
+	&.tm_pb_toggle_open {
+		transition: .3s linear;
+
+		.tm_pb_toggle_content {
+			padding: 10px 22% 10px 0;
+		}
+	}
+
+	&.tm_pb_toggle_open {
+		.tm_pb_toggle_title::before {
+			@include transform(rotate(90deg));
+		}
+	}
+
+	&.tm_pb_toggle_close {
+		background-color: transparent;
+	}
+}

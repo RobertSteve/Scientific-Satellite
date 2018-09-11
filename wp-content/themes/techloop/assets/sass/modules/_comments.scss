@@ -1,0 +1,183 @@
+.comments {
+	&-area {
+		position: relative;
+		margin-bottom: 60px;
+		padding-right: $grid-gutter-width / 2;
+		padding-left: $grid-gutter-width / 2;
+		overflow: hidden;
+		z-index: 1;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: -1px;
+			right: -5000px;
+			bottom: 0;
+			left: -5000px;
+			display: block;
+			z-index: -1;
+		}
+
+		@include media-breakpoint-up(xl) {
+			padding-right: 0;
+			padding-left: 0;
+			overflow: visible;
+		}
+	}
+
+	&-title {
+		display: block;
+		padding-top: 60px;
+		margin-bottom: 23px;
+	}
+}
+
+.comment {
+	&-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		> li:last-child > article {
+			margin-bottom: 30px;
+		}
+
+		.children {
+			margin-left: 0;
+			padding-left: 5px;
+			list-style: none;
+
+			@include media-breakpoint-up(md) {
+				padding-left: 10px;
+			}
+
+			@include media-breakpoint-up(lg) {
+				padding-left: 15px;
+			}
+
+			> .comment {
+				margin-top: 20px;
+			}
+		}
+
+		div.comment-respond {
+			position: relative;
+			overflow: visible;
+		}
+
+		> .comment,
+		> .ping {
+			&.depth-1.parent > .children {
+				@include media-breakpoint-up(xl) {
+					padding-left: 100px;
+				}
+			}
+
+			& + .comment,
+			& + .ping {
+				margin-top: 20px;
+				padding-top: 20px;
+				border-top: 1px solid $color__background-hr;
+
+				@include media-breakpoint-up(lg) {
+					margin-top: 31px;
+					padding-top: 31px;
+				}
+			}
+
+		}
+
+		+ .comment-respond {
+			margin-top: 28px;
+		}
+	}
+
+	&-body {
+		&__holder {
+			position: relative;
+			display: flex;
+		}
+
+		.avatar {
+			width: 40px;
+			margin: 5px 15px 10px 0;
+			border-radius: 50%;
+
+			@include media-breakpoint-up(lg) {
+				width: auto;
+				margin: 5px 30px 15px 0;
+			}
+		}
+
+		.fn {
+			margin-bottom: 2px;
+		}
+
+		.reply {
+			text-transform: none;
+		}
+	}
+
+	&-content-wrap {
+		position: relative;
+		flex: 0 1 100%;
+		@include border-radius();
+	}
+
+	&-author {
+		flex-shrink: 0;
+	}
+
+	&-content {
+		margin-top: 8px;
+
+		> *:last-child {
+			margin-bottom: 0;
+		}
+
+		p {
+			margin-bottom: 1em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		a {
+			word-wrap: break-word;
+		}
+	}
+
+	&-meta {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@include font-size(12/16);
+
+		&data {
+			margin-top: 3px;
+
+			> * {
+				display: inline-block;
+
+				+ *:before {
+					content: "-";
+					margin: 0 9px;
+				}
+			}
+		}
+	}
+
+	&-reply-link {
+		display: block;
+		border-bottom: 1px solid;
+
+		&:hover {
+			border-bottom-color: transparent;
+		}
+	}
+}
+
+.bypostauthor {
+	display: block;
+}

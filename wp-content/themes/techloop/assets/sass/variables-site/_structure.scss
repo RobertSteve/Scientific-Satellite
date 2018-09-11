@@ -1,0 +1,27 @@
+// Options
+$enable-rounded: true !default;
+
+$border__radius:     0;
+$box__shadow:        0 8px 16px rgba(186,186,213,0.57);
+$box__shadow_mobile: 0 4px 8px rgba(186,186,213,0.57);
+
+$box__shadow_banner:        6px 8px 16px rgba(186,186,213,0.57);
+$box__shadow_banner_mobile: 3px 4px 8px rgba(186,186,213,0.57);
+
+$size__site-main:    100%;
+$size__site-sidebar: 25%;
+
+$input__indents_y: 9px;
+$input__indents_x: 20px;
+
+$padding-box-sm: 20px;
+$padding-box-md: 30px;
+
+$button__indents:       15px 28px 15px;
+$button__indents_y:     15px;
+$button__indents_x:     28px;
+$button__border-radius: $border__radius;
+$button__border:        1px solid;
+$button__box-shadow:    none;
+
+$embed__ratio: 39.592%;  //  thumbnail height / thumbnail width

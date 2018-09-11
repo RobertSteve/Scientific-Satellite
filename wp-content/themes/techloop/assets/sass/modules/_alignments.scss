@@ -1,0 +1,26 @@
+#tm_builder_outer_content .tm_pb_module img.alignleft,
+.alignleft {
+	margin-bottom: 15px;
+
+	@include media-breakpoint-up(md) {
+		float: left;
+		margin: 15px 30px 15px 0;
+	}
+}
+
+#tm_builder_outer_content .tm_pb_module img.alignright,
+.alignright {
+	margin-bottom: 15px;
+
+	@include media-breakpoint-up(md) {
+		float: right;
+		margin: 15px 0 15px 30px;
+	}
+}
+
+#tm_builder_outer_content .tm_pb_module img.aligncenter,
+.aligncenter {
+	@include center-block;
+	margin-bottom: 15px;
+	clear: both;
+}

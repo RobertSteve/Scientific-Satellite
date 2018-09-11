@@ -1,0 +1,131 @@
+.widget.widget-about-author {
+	padding:0;
+
+	.about-author_img{
+		width: 100%;
+		border-radius: 0;
+		padding: $padding-box-md;
+	}
+
+	.widget-title{
+		.sidebar &{
+			margin-bottom: 0;
+		}
+	}
+
+	.about-author_btn_box{
+		padding-bottom: $padding-box-md;
+		padding-left: $padding-box-md;
+		text-align: left;
+	}
+
+	.sidebar & {
+		.widget-title {
+			margin-bottom: 1.42em;
+		}
+	}
+}
+
+.about-author {
+	text-align: center;
+
+	&:after {
+		display: block;
+		clear: both;
+		width: 100%;
+		content: '';
+	}
+
+	&_avatar {
+		margin: 0 0 1em;
+		max-width: 100%;
+	}
+
+	&_img {
+		border-radius: 100%;
+	}
+
+	&_content {
+		overflow: hidden;
+	}
+
+	&_name {
+		margin: 0;
+		padding: 0 0 1em;
+	}
+
+	&_description {
+		margin-bottom: 20px;
+		margin-top: 20px;
+		text-transform: none;
+	}
+
+	&_btn_box {
+		&,
+		#tm_builder_outer_content .tm_pb_module.tm_pb_widget_area & {
+			.about-author_btn {
+				display: block;
+				max-width: 190px;
+				margin-right: auto;
+				margin-left: auto;
+			}
+		}
+	}
+
+	@include sidebars-area() {
+		&_avatar {
+			margin-bottom: 17px;
+		}
+
+		&_content {
+			overflow: visible;
+			text-align: center;
+		}
+
+		&_btn_box .about-author_btn {
+			margin-left: 0;
+			display: inline-block;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		text-align: left;
+
+		&_avatar {
+			float: left;
+			max-width: 50%;
+
+			@include sidebars-area(){
+				margin: 0;
+			}
+			margin: 0 1.5em 0 0;
+		}
+
+		@include sidebars-area(){
+			&_avatar {
+				float: none;
+				max-width: none;
+			}
+		}
+
+		&_btn_box {
+			&,
+			#tm_builder_outer_content .tm_pb_module.tm_pb_widget_area & {
+				.about-author_btn {
+					margin-right: auto;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+
+.sidebar{
+	.about-author{
+		text-align: center;
+	}
+	.about-author_img{
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

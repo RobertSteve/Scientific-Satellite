@@ -1,0 +1,77 @@
+/* #Paginations */
+.site-content a.page-numbers:hover,
+.site-content .page-numbers.current,
+#tm_builder_outer_content .pagination a.page-numbers:hover,
+#tm_builder_outer_content .pagination .page-numbers.current {
+	background-color: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+	color: $invert_text_color;
+}
+
+.site-content .page-links a,
+.site-content .page-numbers,
+#tm_builder_outer_content .pagination .page-numbers{
+	color: $regular_accent_color_2;
+}
+
+.site-content .page-numbers.next,
+.site-content .page-numbers.prev,
+#tm_builder_outer_content .pagination .page-numbers.next,
+#tm_builder_outer_content .pagination .page-numbers.prev {
+	color: $invert_accent_color_1;
+	background: $regular_accent_color_2;
+	border-color: $regular_accent_color_2;
+}
+
+.site-content .page-numbers.next:hover,
+.site-content .page-numbers.prev:hover,
+#tm_builder_outer_content .pagination .page-numbers.next:hover,
+#tm_builder_outer_content .pagination .page-numbers.prev:hover{
+	color: $invert_accent_color_1;
+	background: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+}
+
+
+/* #Breadcrumbs */
+.breadcrumbs {
+	background-color: $top_panel_bg;
+}
+
+.breadcrumbs__item {
+	font-style: $breadcrumbs_font_style;
+	font-weight: $breadcrumbs_font_weight;
+	font-size: $breadcrumbs_font_size{px};
+	line-height: $breadcrumbs_line_height;
+	font-family: @font_family( $breadcrumbs_font_family );
+	letter-spacing: $breadcrumbs_letter_spacing{em};
+}
+
+.breadcrumbs__item-link{
+	color: $regular_text_color;
+}
+
+.breadcrumbs__item-link:hover{
+	color: $regular_accent_color_1;
+}
+
+.breadcrumbs__title .page-title{
+	font-family: $h5_font_family;
+	font-size: $h5_font_size{px};
+	font-style: $h5_font_style;
+	font-weight: $h5_font_weight;
+	line-height: $h5_line_height;
+	letter-spacing: $h5_letter_spacing{em};
+	color: $regular_text_color;
+}
+
+.home_page__vertical_menu .main-navigation > .menu > li.menu-item > a:hover{
+	background: $regular_accent_color_2;
+}
+
+.invert .widget_nav_menu ul li.current-menu-item > a:hover,
+.invert .widget_categories ul li.current-cat > a:hover,
+.invert .widget_product_categories ul li.current-cat > a:hover,
+.invert .widget_pages ul li.current_page_item a:hover{
+	color: $invert_accent_color_1;
+}

@@ -1,0 +1,71 @@
+/* #ToTop button */
+#toTop {
+	color: $invert_text_color;
+	background-color: $regular_accent_color_1;
+}
+#toTop:hover {
+	background-color: $regular_accent_color_2;
+}
+
+/* #Magnific Popup*/
+.single-product .mfp-iframe-holder .mfp-close,
+.single-product .mfp-image-holder .mfp-close {
+	color: $regular_accent_color_2;
+}
+
+.mfp-iframe-holder .mfp-close,
+.mfp-image-holder .mfp-close {
+	color: $invert_accent_color_1;
+}
+
+.mfp-iframe-holder .mfp-arrow:hover,
+.mfp-image-holder .mfp-arrow:hover,
+.mfp-iframe-holder .mfp-close:hover,
+.mfp-image-holder .mfp-close:hover {
+	color: $regular_accent_color_1;
+}
+
+.mfp-ajax-holder .mfp-close:hover,
+.single-product .mfp-iframe-holder .mfp-close:hover,
+.single-product .mfp-image-holder .mfp-close:hover {
+	color: $regular_accent_color_1;
+}
+
+.mfp-iframe-holder .mfp-arrow:before,
+.mfp-iframe-holder .mfp-arrow:after,
+.mfp-image-holder .mfp-arrow:before,
+.mfp-image-holder .mfp-arrow:after {
+	background: $invert_accent_color_1;
+}
+
+.mfp-iframe-holder .mfp-arrow:hover:before,
+.mfp-iframe-holder .mfp-arrow:hover:after,
+.mfp-image-holder .mfp-arrow:hover:before,
+.mfp-image-holder .mfp-arrow:hover:after {
+	background: $regular_accent_color_1;
+}
+
+.mfp-ajax-holder .mfp-arrow:before,
+.mfp-ajax-holder .mfp-arrow:after,
+.single-product .mfp-iframe-holder .mfp-arrow:before,
+.single-product .mfp-iframe-holder .mfp-arrow:after,
+.single-product .mfp-image-holder .mfp-arrow:before,
+.single-product .mfp-image-holder .mfp-arrow:after {
+	background: $regular_accent_color_2;
+}
+
+.quick-view-buttons:before,
+.quick-view-buttons:after {
+	background: $invert_accent_color_1;
+}
+
+.mfp-ajax-holder .mfp-arrow:hover:before,
+.mfp-ajax-holder .mfp-arrow:hover:after,
+.mfp-iframe-holder .mfp-arrow:hover:before,
+.mfp-iframe-holder .mfp-arrow:hover:after,
+.mfp-image-holder .mfp-arrow:hover:before,
+.mfp-image-holder .mfp-arrow:hover:after,
+.quick-view-buttons:hover:before,
+.quick-view-buttons:hover:after{
+	background: $regular_accent_color_1;
+}

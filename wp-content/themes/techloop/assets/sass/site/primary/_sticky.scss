@@ -1,0 +1,39 @@
+.sticky {
+	display: block;
+
+	&__label {
+		display: block;
+		margin-top: 3px;
+		margin-right: 11px;
+		flex-shrink: 0;
+		float: left;
+		border-radius: 30px;
+		text-align: center;
+
+		.posts-list--default & {
+			margin-top: 30px;
+		}
+
+		i {
+			display: block;
+			width: 30px;
+			height: 30px;
+			font-size: 20px;
+			line-height: 28px;
+		}
+
+		&.type-label,
+		&.type-both {
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		&.type-both {
+			i {
+				display: inline-block;
+				margin-right: 5px;
+				line-height: 30px;
+			}
+		}
+	}
+}

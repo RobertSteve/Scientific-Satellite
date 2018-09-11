@@ -1,0 +1,84 @@
+#tm_builder_outer_content .tm_pb_module.tm_pb_accordion {
+	padding: 0 $padding-box-md;
+
+	@include media-breakpoint-only(lg) {
+		padding: 0 $padding-box-sm;
+	}
+
+	.tm_pb_toggle {
+		margin-bottom: 0;
+		padding: 22px 0 21px;
+
+		& + .tm_pb_toggle {
+			border-top: 1px solid $color__background-hr;
+		}
+
+		&.tm_pb_toggle_close,
+		&.tm_pb_toggle_open {
+			.tm_pb_toggle_title {
+				padding: 10px 33px 10px 0;
+
+				&::before,
+				&::after {
+					position: absolute;
+					top: 50%;
+					right: 0;
+					left: auto;
+					margin-top: -0.65em;
+					transition: all .3s linear;
+					border: none;
+					@include linear-icon;
+					@include font-size(20/16);
+				}
+
+				&::before {
+					content: "\e936";
+					opacity: 1;
+					visibility: visible;
+				}
+
+				&::after {
+					content: "\e937";
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
+
+			.tm_pb_toggle_content {
+				padding: 10px 22% 10px 0;
+			}
+		}
+
+		&.tm_pb_toggle_close {
+			.tm_pb_toggle_title::before {
+				opacity: 1;
+				visibility: visible;
+				@include transform(rotate(0deg));
+			}
+
+			.tm_pb_toggle_title::after {
+				opacity: 0;
+				visibility: hidden;
+				@include transform(rotate(-90deg));
+			}
+		}
+
+		&.tm_pb_toggle_open {
+			.tm_pb_toggle_title::before {
+				opacity: 0;
+				visibility: hidden;
+				@include transform(rotate(90deg));
+			}
+
+			.tm_pb_toggle_title::after {
+				opacity: 1;
+				visibility: visible;
+				@include transform(rotate(0deg));
+			}
+		}
+	}
+
+	.tm_pb_toggle.tm_pb_toggle_close {
+		background-color: transparent;
+	}
+}

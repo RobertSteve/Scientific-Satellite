@@ -1,0 +1,76 @@
+#tm_builder_outer_content {
+	.tm_pb_module.tm_pb_countdown_timer {
+		padding: 9.2% 7.5% 6.6%;
+
+		.tm_pb_countdown_timer_container {
+			h4 {
+				margin-bottom: 25px;
+
+				@include media-breakpoint-up(lg) {
+					margin-bottom: 50px;
+				}
+			}
+
+			.section {
+				&.values {
+					margin: 0 0 10px;
+
+					.value {
+						line-height: 1;
+						@include font-size(36/16);
+					}
+
+					.label {
+						text-transform: none;
+						line-height: 1;
+						@include font-size(15/16);
+					}
+
+					@include media-breakpoint-up(sm) {
+						margin: 0 8px 10px;
+
+						.value {
+							@include font-size(72/16);
+						}
+
+						.label {
+							line-height: 2;
+							@include font-size(18/16);
+						}
+					}
+				}
+
+				&.sep {
+					top: -17px;
+					line-height: 1;
+					@include font-size(35/16);
+
+					@include media-breakpoint-up(sm) {
+						top: -26px;
+						@include font-size(52/16);
+					}
+				}
+			}
+		}
+
+		&.tm_pb_countdown_timer_circle_layout {
+			.tm_pb_countdown_timer_container {
+				.section {
+					&.values {
+						margin: 0 33px 10px;
+					}
+
+					&.sep {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.tm_pb_countdown_timer_circle_border {
+		.section.values {
+			border: 2px solid;
+		}
+	}
+}

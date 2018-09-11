@@ -1,0 +1,31 @@
+#tm_builder_outer_content {
+	.tm_pb_promo.tm_pb_module {
+		padding: $padding-box-md !important;
+		background-position: center center;
+
+		.tm_pb_promo_description {
+			padding-bottom: 0;
+
+			h2 {
+				margin-bottom: 5px;
+			}
+		}
+
+		.tm_pb_promo_button {
+			margin-top: 30px;
+
+			@include media-breakpoint-up(md) {
+				margin-top: 50px;
+			}
+		}
+	}
+
+	.tm_pb_column_1_2 .tm_pb_promo.tm_pb_module,
+	.tm_pb_column_4_4 .tm_pb_promo.tm_pb_module {
+		padding: $padding-box-md !important;
+
+		@include media-breakpoint-up(lg) {
+			padding: $padding-box-md * 2 $padding-box-md * 1.5 !important;
+		}
+	}
+}
