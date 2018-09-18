@@ -123,7 +123,7 @@ if ( ! class_exists( 'Techloop_Contact_Information_Widget' ) ) {
 			if( ! empty( $instance['contact_information'] ) ){
 
 				foreach ( $instance['contact_information'] as $key => $value ) {
-					$icon           = ( $value['icon'] ) ? '<span class="icon linearicon ' . $value['icon'] . '"></span>' : '';
+					$icon           = ( $value['icon'] ) ? '<span class="icon4rzo linearicon ' . $value['icon'] . '"></span>' : '';
 					$text           = $value['value'];
 					$item_mod_class = ( $value['icon'] ) ? 'contact-information__item--icon' : '';
 

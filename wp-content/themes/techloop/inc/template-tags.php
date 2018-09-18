@@ -147,13 +147,13 @@ function techloop_contact_block( $target = 'header' ) {
 		return;
 	}
 
-	$icon_format = apply_filters( 'techloop_contact_block_icon_format', '<i class="contact-block__icon linearicon %1$s"></i>' );
+	$icon_format = apply_filters( 'techloop_contact_block_icon_format', '<i class="contact-block__icon-4rzo linearicon %1$s"></i>' );
 
 	$html = '<div class="contact-block contact-block--' . $target . '"><div class="contact-block__inner">';
 
 	foreach ( $contact_info as $key => $value ) {
 		$icon           = ( $value['icon'] ) ? sprintf( $icon_format, $value['icon'] ) : '';
-		$label          = ( $value['label'] ) ? sprintf( '<span class="contact-block__label">%1$s</span>', $value['label'] ) : '';
+		$label          = ( $value['label'] ) ? sprintf( '<span class="contact-block__label_4rzo">%1$s</span>', $value['label'] ) : '';
 		$text           = ( $value['value'] ) ? sprintf( '<span class="contact-block__text">%1$s</span>', wp_kses( $value['value'], wp_kses_allowed_html( 'post' ) ) ) : '';
 		$item_mod_class = ( $value['icon'] ) ? 'contact-block__item--icon' : '';
 

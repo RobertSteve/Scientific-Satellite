@@ -749,7 +749,7 @@ function wc_get_image_size( $image_size ) {
 			$size['crop']   = 0;
 
 		} elseif ( 'gallery_thumbnail' === $image_size ) {
-			$size['width']  = absint( wc_get_theme_support( 'gallery_thumbnail_image_width', 150 ) );
+			$size['width']  = absint( wc_get_theme_support( 'gallery_thumbnail_image_width', 300 ) );
 			$size['height'] = $size['width'];
 			$size['crop']   = 1;
 

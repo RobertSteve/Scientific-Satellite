@@ -6,8 +6,9 @@
  * @subpackage widgets
  */
 ?>
-
-<li class="contact-information__item <?php echo $item_mod_class; ?>">
+<li class="contact4rzo"> <?php //echo $item_mod_class; ?>
 	<?php echo $icon; ?>
-	<?php echo $text; ?>
+	<div class="text4rzo">
+		<?php echo $text; ?>
+	</div>
 </li>
