@@ -18,9 +18,12 @@
 				<i class="linearicon linearicon-cog icon-drodown"></i>
 				<?php techloop_top_menu(); ?>
 			</div>
+
+			<?php techloop_header_cart(); ?>
+			<?php //techloop_currency_switcher() ?>
+
 		<div class="header-icons">
 			<?php techloop_header_search( '<div class="header-search"><span class="search-form__toggle"></span>%s<span class="search-form__close"></span></div>' ); ?>
 		</div>
-		<?php techloop_header_cart(); ?>
 	</div>
 </div>

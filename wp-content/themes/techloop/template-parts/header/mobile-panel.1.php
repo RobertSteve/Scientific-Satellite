@@ -11,9 +11,9 @@ $menu = has_nav_menu( 'top' );
 ?>
 <div class="mobile-panel">
 	<?php techloop_menu_toggle( 'main-menu', 'mobile-toggle' ); ?>
-	<?php echo techloop_header_logo_4rzo() ?>
 	<div class="mobile-panel__right">
 		<?php techloop_header_search( '<div class="header-search"><span class="search-form__toggle"></span>%s<span class="search-form__close"></span></div>' ); ?>
+		<?php techloop_currency_switcher() ?>
 		<?php techloop_header_cart(); ?>
 		<?php if ( $menu ) { ?>
 			<div class="mobile-panel__menu-wrap dropdown-wrap__block dropdown">

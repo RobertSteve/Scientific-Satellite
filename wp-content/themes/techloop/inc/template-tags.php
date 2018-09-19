@@ -268,6 +268,27 @@ function techloop_header_logo() {
 	printf( $format, $tag, esc_url( home_url( '/' ) ), $logo );
 }
 
+/*
+** 4rzo Logo Mobile
+*/
+function techloop_header_logo_4rzo(){
+	$logo = techloop_get_site_title_by_type( get_theme_mod( 'header_logo_type', techloop_theme()->customizer->get_default( 'header_logo_type' ) ) );
+
+	if ( is_front_page() && is_home() ) {
+		$tag = 'h1';
+	} else {
+		$tag = 'div';
+	}
+
+	$format = apply_filters(
+		'techloop_header_logo_format',
+		'<%1$s class="site-logo" style="width: 120px;">
+			<a class="site-logo__link" href="%2$s" rel="home">%3$s</a>
+		</%1$s>'
+	);
+
+	printf( $format, $tag, esc_url( home_url( '/' ) ), $logo );
+}
 /**
  * Retrieve the site title (image or text).
  *

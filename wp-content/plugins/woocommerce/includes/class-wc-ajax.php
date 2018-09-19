@@ -175,7 +175,7 @@ class WC_AJAX {
 		$data = array(
 			'fragments' => apply_filters(
 				'woocommerce_add_to_cart_fragments', array(
-					'div.widget_shopping_cart_content' => '<div class="widget_shopping_cart_content">' . $mini_cart . '</div>',
+					'div.widget_shopping_cart_content' => '<div class="widget_shopping_cart_content widget_shopping_cart_content_4rzo">' . $mini_cart . '</div>',
 				)
 			),
 			'cart_hash' => apply_filters( 'woocommerce_add_to_cart_hash', WC()->cart->get_cart_for_session() ? md5( json_encode( WC()->cart->get_cart_for_session() ) ) : '', WC()->cart->get_cart_for_session() ),
