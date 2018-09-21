@@ -87,3 +87,88 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
         display: none;
     }
 }
+.article-wrapper-main {
+    padding: 5px;
+  }
+  
+  .article-wrapper {
+    height: 380px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .article-wrapper .article-category-background {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scale(1.1, 1.1);
+    z-index: 0;
+    transition: transform 0.6s ease;
+    opacity: 0.9;
+  }
+  .article-wrapper .article-category {
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+    color: #FFF;
+    position: relative;
+    z-index: 2;
+  }
+  .article-wrapper .article-category.article-category-large {
+    max-width: 90%;
+  }
+  @media screen and (min-width: 768px) {
+    .article-wrapper .article-category.article-category-large {
+      max-width: 70%;
+    }
+  }
+  .article-wrapper .article-category h3 {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.1em;
+  }
+  @media screen and (min-width: 920px) {
+    .article-wrapper .article-category h3 {
+      font-size: 33px;
+      transform: translate3d(0, 80%, 0);
+      transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+  .article-wrapper .article-category p {
+    font-size: 14px;
+    line-height: 1.6em;
+    font-weight: 400;
+  }
+  @media screen and (min-width: 920px) {
+    .article-wrapper .article-category p {
+      opacity: 0;
+      transform: translate3d(0, 60%, 0);
+      transition: opacity 1s, transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+      font-size: 16px;
+    }
+  }
+  .article-wrapper .article-category .btn {
+    border-width: 2px;
+    font-size: 13px;
+    padding: 10px;
+  }
+  .article-wrapper:hover .article-category-background {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  @media screen and (min-width: 920px) {
+    .article-wrapper:hover .article-category h3 {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @media screen and (min-width: 920px) {
+    .article-wrapper:hover .article-category p {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
