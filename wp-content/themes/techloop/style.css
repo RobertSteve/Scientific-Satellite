@@ -127,13 +127,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       max-width: 70%;
     }
   }
-  .article-wrapper .article-category h3 {
+  .article-wrapper .article-category .title-h3 {
     font-size: 25px;
     font-weight: 600;
     line-height: 1.1em;
   }
   @media screen and (min-width: 920px) {
-    .article-wrapper .article-category h3 {
+    .article-wrapper .article-category .title-h3 {
       font-size: 33px;
       transform: translate3d(0, 80%, 0);
       transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
@@ -162,7 +162,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     opacity: 1;
   }
   @media screen and (min-width: 920px) {
-    .article-wrapper:hover .article-category h3 {
+    .article-wrapper:hover .article-category .title-h3 {
       transform: translate3d(0, 0, 0);
     }
   }

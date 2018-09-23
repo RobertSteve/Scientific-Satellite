@@ -40,12 +40,12 @@ class Category_Products extends WP_Widget{
                 $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
                 $image = wp_get_attachment_url( $thumbnail_id );
                 $html .= '<div class="'.$css.'" data-wow-duration=".4s" data-wow-delay=".1s">';
-                $html .= '<a href="'.get_category_link($cat->term_id).'" title="Ver productos">';
+                $html .= '<a href="'.get_category_link($cat->term_id).'" title="Ver Productos de '.$cat->cat_name.'">';
                 $html .= '<div class="article-wrapper">';
                 $html .= '<div class="article-category-background" style="background-image:url('.$image.');"></div>';
                 $html .= '<article class="article-category d-flex align-items-end">';
                 $html .= '<div class="article-category-description">';
-                $html .= '<h3>'.$cat->cat_name.'</h3>';
+                $html .= '<div class="title-h3">'.$cat->cat_name.'</div>';
                 $html .= '<p>'.$cat->category_description.'</p>';
                 $html .= '</div>';
                 $html .= '</article>';
