@@ -20,20 +20,20 @@
 		?></div>
 		<div class="tm-posts_item_content invert"><?php
 
-			/*tm_builder_core()->utility()->meta_data->get_terms( array(
+			tm_builder_core()->utility()->meta_data->get_terms( array(
 				'visible' => true,
 				'type'    => 'category',
 				'before'  => '<span class="post-cats">',
 				'after'   => '</span>',
 				'echo'    => true,
-			) );*/
+			) );
 
 			tm_builder_core()->utility()->attributes->get_title( array(
 				'visible'      => true,
 				'trimmed_type' => 'word',
 				'length'       => apply_filters( 'techloop_pb_module_posts_layout_3_title_length', 7 ),
 				'ending'       => '&hellip;',
-				'html'         => '<h4 %1$s><a href="%2$s" %3$s rel="bookmark">%4$s</a></h4>',
+				'html'         => '<h5 %1$s><a href="%2$s" %3$s rel="bookmark">%4$s</a></h5>',
 				'class'        => 'tm-posts_item_title',
 				'echo'         => true,
 			) );
@@ -56,7 +56,7 @@
 
 			tm_builder_core()->utility()->attributes->get_button( array(
 				'visible'   => apply_filters( 'techloop_pb_module_posts_layout_3_more_btn_visible', false ),
-				'text'      => esc_html__( 'Leer Más', 'techloop' ),
+				'text'      => esc_html__( 'Read More', 'techloop' ),
 				'class'     => 'btn btn-secondary',
 				'html'      => '<a href="%1$s" %3$s><span class="link__text">%4$s</span>%5$s</a>',
 				'echo'      => true,
