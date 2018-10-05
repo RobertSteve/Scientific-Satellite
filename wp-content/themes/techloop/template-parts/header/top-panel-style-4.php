@@ -21,7 +21,7 @@ $contact_block_visibility = get_theme_mod( 'header_contact_block_visibility', te
 	<div class="div">
 		<?php techloop_contact_block( 'header' );?>
 	</div>
-	<div class="div">
-		ES EN
+	<div class="div" id="weglot_here">
+		
 	</div>
 </div>
