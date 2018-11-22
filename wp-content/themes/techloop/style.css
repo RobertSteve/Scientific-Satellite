@@ -172,3 +172,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       opacity: 1;
     }
   }
+/*
+** Ocultar la opción sin categoria
+*/
+.cat-item-15 {
+  display: none !important;
+}
+
+.wgcurrent {
+  color: #2479d0;
+  padding: 1px 0px;
+}

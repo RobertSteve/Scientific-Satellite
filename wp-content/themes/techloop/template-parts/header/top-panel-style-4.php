@@ -21,7 +21,7 @@ $contact_block_visibility = get_theme_mod( 'header_contact_block_visibility', te
 	<div class="div">
 		<?php techloop_contact_block( 'header' );?>
 	</div>
-	<div class="div" id="weglot_here">
-		
+	<div class="div">
+		<?php echo do_shortcode ("[weglot_switcher]"); ?>
 	</div>
 </div>
